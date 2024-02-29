@@ -1,0 +1,241 @@
+#todo-app {
+    font-family: 'Roboto', sans-serif;
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 8px;
+    background-color: #4a4949;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    outline: none;
+}
+
+#todo-app h1 {
+    color: rgb(0, 238, 255);
+    position: absolute;
+    top: 5px;
+    right: 197.5px;
+    font-size: 21px;
+    text-align: center;
+    vertical-align: text-top;
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    top: 9px;
+}
+
+.dropbtn {
+    background-color: #4a4949;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    top: 8px;
+    margin-left: -5px;
+    min-width: 80px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    width: 100px;
+    display: block;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#todo-input, #todo-list li {
+    font-size: 18px;
+}
+
+#todo-input {
+    width: calc(100% - 200px);
+    padding: 5px;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    background-color: transparent;
+    margin-top: 40px;
+    font-size: 18px;
+    color: rgb(220, 215, 215);
+}
+
+#add-todo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    width: 21px;
+    height: 21px;
+    padding: 0;
+    position: absolute;
+    top: 70px;
+    right: 38px;
+    border: none;
+    background-color: #00eeff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-todo:hover {
+    background-color: #1dd0d9;
+}
+
+#todo-list li {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: rgb(220, 215, 215);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+#pomodoro-progress {
+    cursor: pointer;
+    stroke:#ffffff;
+}
+
+#pomodoro-progress:hover {
+    opacity: 0.8;
+}
+
+#pomodoro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#pomodoro-timer {
+    position: absolute;
+    top: 80px;
+    right: 138px;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+#pomodoro-timer svg {
+    transform: rotate(-90deg);
+}
+
+#pomodoro-time {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+#todo-list li span {
+    margin-right: auto;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 85%;
+}
+
+.delete-todo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.delete-todo:hover {
+    background-color: #ccc;
+}
+
+.delete-todo.checked {
+    background-color: rgb(0, 238, 255);
+    color: white;
+}
+
+body, html {
+    background-color: #4a4949;
+}
+
+#pomodoro-duration {
+    width: 43px;
+    height: 5.5%;
+    padding: 2px;
+    position: absolute;
+    top: calc(65%);
+    right: 235px;
+    border-radius: 4px;
+    border: 1px solid rgb(255, 255, 255);
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+}
+
+#pomodoro-duration:focus {
+    outline: none;
+}
+
+#start-pomodoro {
+    padding: 5px 10px;
+    position: absolute;
+    top: 65%;
+    right: 170px;
+    background-color: rgb(0, 238, 255);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+}
+
+#start-pomodoro:hover, #reset-pomodoro:hover {
+    opacity: 0.9;
+}
+
+#resume-pomodoro, #pause-pomodoro{
+    position: relative;
+}
