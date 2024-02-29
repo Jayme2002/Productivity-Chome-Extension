@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python To-Do List</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main container for the todo application -->
+    <div id="todo-app">
+        <!-- Pomodoro timer features section, initially hidden -->
+        <div id="pomodoro-features" style="display: none;">
+            <h2></h2>
+            <!-- Pomodoro timer display -->
+            <div id="pomodoro-timer">
+                <svg width="120" height="120">
+                    <!-- Progress ring for Pomodoro timer -->
+                    <circle cx="60" cy="60" r="54" stroke="#00eeff" stroke-width="12" fill="none"></circle>
+                    <!-- Progress indicator for Pomodoro timer -->
+                    <circle id="pomodoro-progress" cx="60" cy="60" r="54" stroke="#4CAF50" stroke-width="12" fill="none" stroke-dasharray="339.292" stroke-dashoffset="339.292"></circle>
+                </svg>
+                <!-- Transparent overlay for click -->
+                <div id="pomodoro-overlay"></div> 
+                <!-- Display for remaining time -->
+                <div id="pomodoro-time">5:00</div>
+            </div>
+            <!-- Input field for setting Pomodoro duration -->
+            <input type="number" id="pomodoro-duration" value="5" min="1" max="999" step="1">
+            <!-- Button to start Pomodoro timer -->
+            <button id="start-pomodoro">Start</button>
+            <!-- Button to pause Pomodoro timer -->
+            <button id="pause-pomodoro" style="display: none;">Pause</button>
+            <!-- Button to resume Pomodoro timer -->
+            <button id="resume-pomodoro" style="display: none;">Resume</button>
+        </div>
+        
+        <!-- Dropdown Menu for selecting Pomodoro or Todo List -->
+        <div class="dropdown">
+            <!-- Button to toggle dropdown -->
+            <button class="dropbtn">≡</button>
+            <!-- Dropdown content -->
+            <div class="dropdown-content">
+                <!-- Option to select Pomodoro -->
+                <a href="#" id="select-pomodoro">Pomodoro</a>
+                <!-- Option to select Todo List -->
+                <a href="#" id="select-todolist">ToDoList</a>
+            </div>
+        </div>
+
+        <!-- Header for the todo list section -->
+        <h1>Done✓</h1>
+        <!-- Input field for adding new tasks -->
+        <input type="text" id="todo-input" placeholder="Add new task...">
+        <!-- Button to add new tasks -->
+        <button id="add-todo">+</button>
+        <!-- List to display todo items -->
+        <ul id="todo-list">
+            <!-- To-do items will be added here -->
+        </ul>
+    </div>
+    
+    <!-- JavaScript file for functionality -->
+    <script src="popup.js"></script>
+</body>
+</html>
