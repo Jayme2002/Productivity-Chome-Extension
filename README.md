@@ -2,7 +2,7 @@
 
 Done✓ is a versatile Chrome extension that combines the functionalities of a to-do list and a Pomodoro timer, designed to boost your productivity by helping you manage tasks and focus on work through time management techniques. This README provides an overview of the extension, installation steps, features, and how to use it.
 
-![donegif](https://github.com/Jayme2002/Productivity-Chome-Extension/assets/132419605/f3a3824f-063b-4232-a6b7-e88b3d7c6528)
+![Feb-29-2024 15-05-58](https://github.com/Jayme2002/Productivity-Chome-Extension/assets/132419605/29ff890f-2bbe-4a3b-a951-de556e86b193)
 
 ## **Features**
 
